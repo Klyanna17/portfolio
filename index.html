@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/17cd6e9a79.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo3.jpg" height="100" width="150" class="logo">
+               <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contacts</a></li>
+               </ul>
+            </nav>
+            <div class="header-text">
+                <p>BSIT FRESHMEN</p>
+                <h1>Hi, Im <span>Francis</span><br> BSIT STUDENT</h1>
+            </div>
+        </div>
+    </div>
+    <!-- --------ABOUT------ -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pp.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi Im Francis Claide Caña 21 yrs old. BSIT freshmen</p>
+                   
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>WEB DEVELOPMENT</span><br>STUDYING FOR WEB DEVELOPMENT</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span></span><br></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2015</span><br>NCES</li>
+                            <li><span>2020</span><br>ASPC</li>
+                            <li><span>2022</span><br>PAP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- -------services ----------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Website Design and Development:</h2>
+                <p>Design and build websites from scratch.<br>
+                    Develop responsive and mobile-friendly websites.<br>
+                    Customize and modify existing website templates.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Application Development:</h2>
+                <p>Create web applications for specific purposes, such as project management, inventory tracking, or customer relationship management (CRM).</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Content Creation:</h2>
+                <p>Create and optimize website content, including text, images, and multimedia elements.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<!-- ----CONTANCTS-------- -->
+<div id="contacts">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> pkate0824@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 09926247236</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/claide.claie"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><i class="fa-light fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="contact-rigt">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Youre Email"required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+    
+        function opentab(event, tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+
+            var selectedTab = document.getElementById(tabname);
+            selectedTab.classList.add("active-tab");
+        }
+    </script>
+
+</body>
+</html>
